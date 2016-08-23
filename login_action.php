@@ -10,16 +10,16 @@
 			if ( $stmt->rowCount() == 1 ) {
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 				$_SESSION['userid'] = $data['id'];
-				$_SESSION['message'] = "<p class='bg-success'>Logged in</p>";
+				$_SESSION['message'] = "<div class='alert alert-success' role='alert'>Logged in</div>";
 				header("Location: index.php");
 			}
 			else {
-				$_SESSION['message'] = "<p class='bg-danger'>Wrong username or password</p>";
+				$_SESSION['message'] = "<div class='alert alert-danger' role='alert'>Wrong username or password</div>";
 				header("Location: index.php");
 			}
 		}
 		else {
-			$_SESSION['message'] = "<p class='bg-danger'>Please input something</p>";
+			$_SESSION['message'] = "<div class='alert alert-danger' role='alert'>Please input something</div>";
 			header("Location: index.php");
 		}
 	}
