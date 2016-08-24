@@ -14,7 +14,7 @@
 				$stmt->bindValue(4, $_SESSION['userid'], PDO::PARAM_STR);
 				$stmt->execute();
 				$_SESSION['name'] = $_POST['name'];
-				$_SESSION['message'] = "<p class='bg-success'>Edited profile</p>";
+				$_SESSION['message'] = "<div class='alert alert-success'>Edited profile</div>";
 				header("Location: index.php");
 			}
 		}
