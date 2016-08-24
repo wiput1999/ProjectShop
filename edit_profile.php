@@ -29,7 +29,7 @@
 					</div>
 					<div class="form-group">
 						<label for="address">Address</label>
-						<input type="password" class="form-control" id="address" name="address">
+						<input type="text" class="form-control" id="address" name="address">
 					</div>
 					<button type="submit" class="btn btn-info"> Save</button>
 				</form>
