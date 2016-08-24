@@ -11,6 +11,7 @@
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 				$_SESSION['name'] = $data['name'];
 				$_SESSION['userid'] = $data['id'];
+				$_SESSION['cart'] = array();
 				$_SESSION['message'] = "<div class='alert alert-success' role='alert'>Logged in</div>";
 				header("Location: index.php");
 			}

@@ -6,9 +6,11 @@ include 'dbc.php';
 <head>
 	<title>Da Shop</title>
 	<?php include 'layout/header.php'; ?>
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<? include 'layout/nav.php'; ?>
+	<div class="header"></div>
 	<div class="container">
 		<?php
 		if ( isset($_SESSION['message']) ){
@@ -16,7 +18,6 @@ include 'dbc.php';
 			unset($_SESSION['message']);
 		}
 		?>
-		<h1>The Shop</h1>
 		<?php
 		if ( !isset($_SESSION['userid']) ){
 			?>
@@ -46,7 +47,7 @@ include 'dbc.php';
 					<p class="desc"><?php echo $data['desc']?></p>
 					<p><?php echo $data['price']?> Baht</p>
 					<a href="product.php?id=<?php echo $data['id']?>">View Product</a>&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="cart_action.php?id=<?php echo $data['id']?>">Add to cart</a>
+					<a href="cart_action.php?action=add&id=<?php echo $data['id']?>">Add to cart</a>
 				</div>
 				<?php
 			}

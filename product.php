@@ -10,6 +10,7 @@
 <head>
 	<title>Da Shop</title>
 	<?php include 'layout/header.php'; ?>
+	<link rel="stylesheet" href="css/product.css">
 </head>
 <body>
 	<?php include 'layout/nav.php'; ?>
@@ -31,7 +32,7 @@
 		<img src="<?php echo $data['image']?>" class="img-responsive">
 		<p><?php echo $data['desc']?></p>
 		<p><?php echo $data['price']?> Baht</p>
-		<a href="cart_action.php?id=<?php echo $data['id']?>">Add to Cart</a>
+		<a href="cart_action.php?action=add&id=<?php echo $data['id']?>">Add to Cart</a>
 	</div>
 </body>
 </html>

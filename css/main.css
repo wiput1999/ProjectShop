@@ -1,5 +1,17 @@
 body {
-	margin-top: 60px;
+	margin-top: 0px;
+}
+
+.container {
+	margin-top: 20px;
+}
+
+.header {
+	height: calc(60vh);
+	width: 100%;
+	background-image: url("http://media.gq.com/photos/56420ddb6ff00fb522b06ccb/16:9/pass/usain-bolt.jpg");
+	background-size: cover;
+	background-position: top center;
 }
 
 .row {
