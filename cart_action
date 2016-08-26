@@ -1,7 +1,0 @@
-<?php
-	include 'dbc.php';
-	session_start();
-
-	$_SESSION['cart'] = array_push($_GET['id']");
-
-?>
