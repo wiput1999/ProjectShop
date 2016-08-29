@@ -3,13 +3,15 @@
 	session_start();
 	if ( $_SERVER['REQUEST_METHOD'] == "POST" && !isset($_SESSION['userid'])){
 		if (( $_POST['pwd'] != "" ) && ($_POST['uname'] != "")){
-			$stmt = $conn->prepare("SELECT user.id, profile.name, profile.surname FROM user INNER JOIN profile ON user.id = profile.id WHERE ( username = ? AND password = ? ) ");
+			$stmt = $conn->prepare("SELECT user.id, profile.name, profile.surname, profile.address FROM user INNER JOIN profile ON user.id = profile.id WHERE ( username = ? AND password = ? ) ");
 			$stmt->bindParam(1,$_POST['uname'],PDO::PARAM_STR);
 			$stmt->bindParam(2,$_POST['pwd'],PDO::PARAM_STR);
 			$stmt->execute();	
 			if ( $stmt->rowCount() == 1 ) {
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 				$_SESSION['name'] = $data['name'];
+				$_SESSION['surname'] = $data['surname'];
+				$_SESSION['address'] = $data['address'];
 				$_SESSION['userid'] = $data['id'];
 				$_SESSION['cart'] = array();
 				$_SESSION['message'] = "<div class='alert alert-success' role='alert'>Logged in</div>";

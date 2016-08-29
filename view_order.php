@@ -10,6 +10,7 @@
 <head>
 	<title>Da Shop</title>
 	<?php include 'layout/header.php'; ?>
+	<link rel="stylesheet" href="css/view_order.css">
 </head>
 <body>
 	<?php include 'layout/nav.php'; ?>

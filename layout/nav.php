@@ -18,6 +18,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed in as <?=$_SESSION['name']?> <span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="view_cart.php">View Cart</a></li>
+							<li><a href="view_order.php">Order History</a></li>
 							<li><a href="edit_profile.php">Edit Profile</a></li>
 							<li role="separator" class="divider"></li>
 							<li><a href="logout.php">Sign Out</a></li>
