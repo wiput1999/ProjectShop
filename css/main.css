@@ -23,10 +23,10 @@ body {
 }
 
 .desc {
-	min-height: 80px;
+	/* min-height: 80px; */
 }
 
 .thumb {
-	max-height: 240px;
+	/* max-height: 240px; */
 	margin: 0 auto;
 }

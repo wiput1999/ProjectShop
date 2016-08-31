@@ -38,16 +38,21 @@ include 'dbc.php';
 		else {
 			$stmt = $conn->prepare("SELECT * FROM product");
 			$stmt->execute();
-			echo "<div class='row'>";
+			echo "<div class='row masonry-container'>";
 			while ( $data = $stmt->fetch(PDO::FETCH_ASSOC)){
 				?>
-				<div class="col-md-4 product_list">
-					<img src="<?php echo $data['image']?>" class="img-responsive thumb">
-					<p class="h2"><?php echo $data['name']?></p>
-					<p class="desc"><?php echo $data['desc']?></p>
-					<p><?php echo $data['price']?> Baht</p>
-					<a href="product.php?id=<?php echo $data['id']?>">View Product</a>&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="cart_action.php?action=add&id=<?php echo $data['id']?>">Add to cart</a>
+				<div class="col-md-4 product_list item">
+					<div class="thumbnail">
+						<img src="<?php echo $data['image']?>" class="img-responsive" alt="">
+						<div class="caption">
+							<h3><?php echo $data['name']?></h3>
+							<p><?php echo $data['desc']?><br><?php echo $data['price']?> Baht</p>
+							<p>
+								<a href="product.php?id=<?php echo $data['id']?>" class="btn btn-primary" role="button">View Product</a> 
+								<a href="cart_action.php?action=add&id=<?php echo $data['id']?>" class="btn btn-default" role="button">Add to cart</a>
+							</p>
+						</div>
+					</div>
 				</div>
 				<?php
 			}
