@@ -48,5 +48,6 @@
 			</div>
 		</div>
 	</div>
+	<?php include 'layout/js.php'; ?>
 </body>
 </html>

@@ -63,5 +63,6 @@ include 'dbc.php';
 		}
 		?>
 	</div>
+	<?php include 'layout/js.php'; ?>
 </body>
 </html>

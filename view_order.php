@@ -34,5 +34,6 @@
 		<p><?php echo $data['price']?> Baht</p>
 		<a href="cart_action.php?id=<?php echo $data['id']?>">Add to Cart</a>
 	</div>
+	<?php include 'layout/js.php'; ?>
 </body>
 </html>
