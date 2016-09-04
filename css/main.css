@@ -9,7 +9,7 @@ body {
 .header {
 	height: calc(60vh);
 	width: 100%;
-	background-image: url("http://media.gq.com/photos/56420ddb6ff00fb522b06ccb/16:9/pass/usain-bolt.jpg");
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a9/Ronnie_O%E2%80%99Sullivan_at_Snooker_German_Masters_(DerHexer)_2015-02-05_02.jpg");
 	background-size: cover;
 	background-position: top center;
 }
