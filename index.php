@@ -43,7 +43,7 @@ include 'dbc.php';
 				?>
 				<div class="col-md-4 product_list item">
 					<div class="thumbnail">
-						<img src="<?php echo $data['image']?>" class="img-responsive" alt="">
+						<a href="product.php?id=<?php echo $data['id']?>"><img src="<?php echo $data['image']?>" class="img-responsive" alt=""></a>
 						<div class="caption">
 							<h3><?php echo $data['name']?></h3>
 							<p><?php echo $data['desc']?><br><?php echo $data['price']?> Baht</p>
