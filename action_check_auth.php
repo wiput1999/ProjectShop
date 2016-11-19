@@ -17,6 +17,7 @@
 			$_SESSION['user_id'] = $data['id'];
 			$_SESSION['firstname'] = $data['firstname'];
 			$_SESSION['lastname'] = $data['lastname'];
+			$_SESSION['email'] = $data['email'];
 			$_SESSION['address'] = $data['address'];
 			$_SESSION['role'] = $data['role'];
 			$_SESSION['cart'] = array();
