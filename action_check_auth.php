@@ -7,8 +7,8 @@
 	}
 	else {
 		require 'dbc.php';
-		$s_password = crypt( $_POST['password'] , '$6$rounds=5000$wanttoseesaltt$');
-		$stmt = $conn->prepare(" SELECT user.id, profile.firstname, profile.lastname, profile.address FROM user INNER JOIN profile ON user.id = profile.id WHERE ( username = ? AND password = ? ) ");
+		$s_password = openssl_digest( $_POST['password'] , 'sha512');
+		$stmt = $conn->prepare(" SELECT user.id, user.role, profile.email, profile.firstname, profile.lastname, profile.address FROM user INNER JOIN profile ON user.id = profile.id WHERE ( username = ? AND password = ? ) ");
 		$stmt->bindParam(1,$_POST['username'],PDO::PARAM_STR);
 		$stmt->bindParam(2,$s_password,PDO::PARAM_STR);
 		$stmt->execute();
