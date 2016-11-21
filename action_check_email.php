@@ -1,8 +1,8 @@
 <?php
 	require 'dbc.php';
 
-	$stmt = $conn->prepare("SELECT * FROM user WHERE username = ?");
-	$stmt->bindParam(1,$_POST['username'],PDO::PARAM_STR);
+	$stmt = $conn->prepare("SELECT * FROM profile WHERE email = ?");
+	$stmt->bindParam(1,$_POST['email']);
 	$stmt->execute();
 
 	$count = $stmt->rowCount();

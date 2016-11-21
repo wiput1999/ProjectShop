@@ -55,30 +55,30 @@
 					</div>
 					<div class="form-group has-feedback">
 						<input type="password" class="form-control" data-minlength="6" id="password" name="password" required="required" placeholder="Password">
-						<span id="username-result" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 						<div class="help-block">Minimum of 6 characters</div>
 					</div>
 					<div class="form-group has-feedback">
 						<input type="password" class="form-control" data-minlength="6" id="cpassword" name="cpassword" data-match="#password" data-match-error="Whoops, these don't match" required="required" placeholder="Confirm Password">
-						<span id="username-result" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 						<div class="help-block with-errors"></div>
 					</div>
 					<div class="form-group has-feedback">
 						<input type="text" class="form-control" id="fname" name="fname" required="required" placeholder="Firstname">
-						<span id="username-result" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 					</div>
 					<div class="form-group has-feedback">
 						<input type="text" class="form-control" id="lname" name="lname" required="required" placeholder="Lastname">
-						<span id="username-result" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 					</div>
-					<div class="form-group has-feedback">
-						<input type="email" name="email" id="email" class="form-control" required="required" placeholder="E-Mail Address" data-error="That email address is invalid">
-						<span id="username-result" class="glyphicon form-control-feedback" aria-hidden="true"></span>
-						<div class="help-block with-errors"></div>
+					<div class="form-group has-feedback" id="register-email-field">
+						<input type="email" name="email" id="register-email" class="form-control" required="required" placeholder="E-Mail Address" data-error="That email address is invalid" data-validate="false">
+						<span id="email-result" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<div class="help-block with-errors" id="register-email-help"></div>
 					</div>
 					<div class="form-group has-feedback">
 						<textarea name="address" id="address" class="form-control" rows="3" required="required" placeholder="Address"></textarea>
-						<span id="username-result" class="glyphicon form-control-feedback" aria-hidden="true"></span>
+						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 					</div>
 					<button type="submit" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i> Register</button>
 				</form>
