@@ -12,8 +12,7 @@ $(document).ready(() => {
 	const register_username_help = $("#register-username-help");
 	const register_username_field = $("#register-username-field");
 	username.change(() => {
-		if( username.val() === "" )
-		{
+		if( username.val() === "" ) {
 			register_username_result.removeClass("glyphicon-ok").addClass("glyphicon-remove");
 			register_username_field.removeClass("has-success").addClass("has-error");
 		}
@@ -49,7 +48,8 @@ $(document).ready(() => {
 	const register_email_help = $("#register-email-help");
 	const register_email_field = $("#register-email-field");
 	email.change(() => {
-		if ( email.val() == "" ){
+		if ( email.val() == "" )
+		{
 			register_email_result.removeClass("glyphicon-ok").addClass("glyphicon-remove");
 			register_email_field.removeClass("has-success").addClass("has-error");
 			register_email_help.addClass("with-error").html("This field can't blank!");

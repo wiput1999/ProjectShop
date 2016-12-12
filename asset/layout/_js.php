@@ -2,4 +2,4 @@
 <script type="text/javascript" src="asset/js/bootstrap.js"></script>
 <script type="text/javascript" src="asset/js/masonry.js"></script>
 <script type="text/javascript" src="asset/js/imagesloaded.js"></script>
-<script type="text/javascript" src="asset/js/form-validator.js"></script>
+<script type="text/javascript" src="asset/js/dominar.js"></script>

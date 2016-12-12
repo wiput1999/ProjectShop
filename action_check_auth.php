@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if( empty($_POST['username']) || empty($_POST['password']) ) {
-		$_SESSION['err_msg'] = "Please insert username or password";
+		$_SESSION['err_msg'] = "<i class='fa fa-times-circle-o' aria-hidden='true'></i> Please insert username or password";
 		header('Location:index.php');
 		exit();
 	}
@@ -21,11 +21,11 @@
 			$_SESSION['address'] = $data['address'];
 			$_SESSION['role'] = $data['role'];
 			$_SESSION['cart'] = array();
-			$_SESSION['info_msg'] = "Login successfully!";
+			$_SESSION['info_msg'] = "<i class='fa fa-check-circle-o' aria-hidden='true'></i> Login successfully!";
 			header('Location:index.php');
 		}
 		else {
-			$_SESSION['err_msg'] = "Invalid username or password!";
+			$_SESSION['err_msg'] = "<i class='fa fa-times-circle-o' aria-hidden='true'></i> Invalid username or password!";
 			header('Location:index.php');
 		}
 	}
