@@ -2,6 +2,6 @@
 	session_start();
 	session_destroy();
 	session_start();
-	$_SESSION['message'] = "<div class='alert alert-info' role='alert'> Logged out </div>";
-	header( "Location: index.php");
+	$_SESSION['info_msg'] = "<i class='fa fa-check-circle-o' aria-hidden='true'></i> Logout successfully, Bye!";
+	header('Location:index.php');
 ?>
